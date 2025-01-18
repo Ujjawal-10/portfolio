@@ -1,16 +1,13 @@
-import React from "react";
 import  {Home} from "./components/Home";
 import Navbar from './components/Navbar';
-import {ThemeContext, ThemeProvider} from "./context/ThemeContext"
-import { useContext } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import About from "./components/About"
+import { ThemeProvider } from "./context/ThemeContext";
 
 function App() {
-  // const theme = useContext(ThemeContext);
   return (
     <>
     <ThemeProvider>
@@ -25,14 +22,6 @@ function App() {
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
-
-
-      {/* <ThemeProvider>
-      
-      <Navbar theme ={theme}/>
-      <Home/>
-      
-      </ThemeProvider> */}
     </>
   );
 }
